@@ -1,0 +1,17 @@
+!!!
+%html
+%head
+	%title Workout Log
+	= csrf_meta_tags 
+	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' 
+	= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' 
+%body
+	%nav.navbar.navbar-default
+		.container
+			.navbar-default
+				= link_to "Workout Log", root_path, class: "navbar-brand"
+			.nav.navbar-right.navbar-right
+				= link_to "New Workout", new_workout_path, class: "navbar navbar-link"
+	
+	.container
+		= yield
